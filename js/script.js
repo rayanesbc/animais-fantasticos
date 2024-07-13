@@ -1,4 +1,4 @@
-import initScrollSuave from "./modules/scroll-suave.js";
+import ScrollSuave from "./modules/scroll-suave.js";
 import initAnimacaoScroll from "./modules/animacao-scroll.js";
 import initAccordion from "./modules/accordion.js";
 import initTabNav from "./modules/tabnav.js";
@@ -9,7 +9,14 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/date-object.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
 
-initScrollSuave();
+// const options = {
+//   behavior: "smooth",
+//   block: "start",
+// };
+// teria que passar essa options como segundo argumento da funcao ScrollSuave abaixo:
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+scrollSuave.init();
+
 initAnimacaoScroll();
 initAccordion();
 initTabNav();
