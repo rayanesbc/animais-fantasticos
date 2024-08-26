@@ -8,6 +8,7 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/date-object.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import initAnimacaoScroll from "./modules/animacao-scroll.js";
+import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
 // const options = {
 //   behavior: "smooth",
@@ -40,5 +41,6 @@ initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
 initAnimacaoScroll();
+initFetchBitcoin();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
