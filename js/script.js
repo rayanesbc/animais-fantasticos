@@ -7,7 +7,7 @@ import initDropdownMenu from "./modules/menu-dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/date-object.js";
 import fetchAnimais from "./modules/fetch-animais.js";
-import initAnimacaoScroll from "./modules/animacao-scroll.js";
+import AnimacaoScroll from "./modules/animacao-scroll.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
 
 // const options = {
@@ -37,10 +37,12 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
+const animacaoScroll = new AnimacaoScroll('[data-anime="scroll"]');
+animacaoScroll.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initAnimacaoScroll();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
 
