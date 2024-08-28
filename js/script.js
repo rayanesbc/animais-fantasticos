@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/menu-dropdown.js";
 import MenuMobile from "./modules/menu-mobile.js";
-import initFuncionamento from "./modules/date-object.js";
+import Funcionamento from "./modules/date-object.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import AnimacaoScroll from "./modules/animacao-scroll.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
@@ -46,7 +46,9 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento("[data-semana]", "aberto");
+// console.log(funcionamento);
+funcionamento.init();
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid");
 
