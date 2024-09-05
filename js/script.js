@@ -9,6 +9,7 @@ import Funcionamento from "./modules/date-object.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import AnimacaoScroll from "./modules/animacao-scroll.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
+import SlideNav from "./modules/slide.js";
 
 // const options = {
 //   behavior: "smooth",
@@ -53,3 +54,8 @@ funcionamento.init();
 fetchAnimais("./animaisapi.json", ".numeros-grid");
 
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco");
+
+const slide = new SlideNav(".slide", ".wrapper");
+slide.init();
+
+slide.addControl(".custom-controls");
